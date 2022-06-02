@@ -4,8 +4,6 @@ import firstViewImg from "../images/23842768_s.jpg";
 
 const HomePage = () => {
 
-  
-
   return (
     <div className='firstView'>
         <div className='firstView__img' style={{

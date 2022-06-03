@@ -2,7 +2,8 @@ import React from 'react';
 import firstViewImg from "../images/23842768_s.jpg";
 
 
-const FirstView = () => {
+const HomePage = () => {
+
   return (
     <div className='firstView'>
         <div className='firstView__img' style={{
@@ -16,4 +17,4 @@ const FirstView = () => {
   )
 }
 
-export default FirstView
+export default HomePage

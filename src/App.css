@@ -135,8 +135,8 @@ nav ul li a:hover {
   margin-top: 100px;
 }
 
-.contact__form {
-  padding: 20px;
+.contact__field {
+  margin-top: 20px;
 }
 
 .contact__field label {
@@ -148,11 +148,15 @@ nav ul li a:hover {
 
 .contact__field input {
   width: 300px;
-  height: 35px;
+  height: 40px;
   border: 1px solid rgb(228, 228, 228);
-  margin-top: 20px;
+  margin-top: 10px;
   box-shadow: 9px 11px 42px -2px #b2d1e1;
   border-radius: 10px;
+}
+
+.contact__right {
+  margin-left: 50px;
 }
 
 .contact__right input {
@@ -171,4 +175,16 @@ nav ul li a:hover {
   border: 1px solid rgb(228, 228, 228);
   box-shadow: 9px 11px 42px -2px #b2d1e1;
   border-radius: 7px;
+}
+
+.contact__error {
+  color: red;
+  margin: 0;
+  align-self: flex-start;
+}
+
+.content__messageOk {
+  margin-top: 30px;
+  color: rgb(105, 104, 104);
+  font-size: 15px;
 }

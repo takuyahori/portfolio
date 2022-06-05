@@ -1,5 +1,4 @@
 import './App.css';
-import './reset.css';
 import Header from './component/Header';
 import HomePage from './component/HomePage';
 import AboutPage from './component/AboutPage';

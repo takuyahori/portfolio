@@ -3,8 +3,8 @@ import React from 'react'
 const Aboutpage = () => {
   return (
     <section className="about">
-      <div className='about__line'></div>
-      <div className='about__inner'>
+      <div className='line'></div>
+      <div className='inner'>
         <div className='about__title'>
           <h2>Profile</h2>
         </div>

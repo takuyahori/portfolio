@@ -83,8 +83,6 @@ nav ul li a:hover {
 
 .about__title {
   position: absolute;
-  top: -130px;
-  font-size: 50px;
   letter-spacing: 10px;
   color:rgb(176, 174, 174);
 }
@@ -100,7 +98,6 @@ nav ul li a:hover {
 }
 
 .about__detail h3 {
-  font-size: 30px;
   letter-spacing: 10px;
 }
 
@@ -120,15 +117,8 @@ nav ul li a:hover {
 
 .contact__text {
   position: absolute;
-  top: -240px;
-  font-size: 50px;
   color: rgb(191, 191, 191);
   letter-spacing: 5px;
-}
-
-
-.contact__wrap {
-  margin-top: 50px;
 }
 
 .contact__field {
@@ -192,14 +182,8 @@ nav ul li a:hover {
 
 .product__title {
   position: absolute;
-  top: -220px;
-  font-size: 50px;
   letter-spacing: 10px;
   color:rgb(176, 174, 174);
-}
-
-.product__wrap {
-  margin: 80px;
 }
 
 .product__list li {
@@ -308,6 +292,7 @@ nav ul li a:hover {
 @media screen and (min-width: 769px) {
   nav ul li {
     display: inline-block;
+    margin-right: 30px;
   }
 
   nav ul li:nth-child(5) {
@@ -323,6 +308,20 @@ nav ul li a:hover {
     height: 180px;
   }
 
+  .about__title {
+    top: -130px;
+    font-size: 50px;
+  }
+
+  .about__detail h3 {
+    font-size: 30px;
+  }
+
+  .contact__text {
+    top: -240px;
+    font-size: 50px;
+  }
+
   .contact__wrap {
     display: flex;
     justify-content: center;
@@ -332,6 +331,15 @@ nav ul li a:hover {
 
   .contact__right {
     margin-left: 50px;
+  }
+
+  .product__title {
+    top: -220px;
+    font-size: 50px;
+  }
+
+  .product__wrap {
+    margin: 80px;
   }
 
   .product__list {

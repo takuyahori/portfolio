@@ -22,6 +22,9 @@ const Header = () => {
                 <li>
                     <Link to="/contact">Contact</Link> 
                 </li>
+                <li>
+                    <a href="https://github.com/takuyahori"><i className="fa-brands fa-github"></i></a> 
+                </li>
             </ul>
         </nav>
     </header>

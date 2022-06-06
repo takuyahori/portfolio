@@ -62,52 +62,56 @@ const ContactPage = () => {
 
   return (
     <section className="contact">
-      <h1>Contact Form</h1>
-      <hr />
-      <form className='contact__form' onSubmit={sendMail}>
-        <div className='contact__wrap'>
-          <div className='contact__left'>
-            <div className='contact__field'>
-              <label>Name</label>
-              <input
-                type='text' 
-                name='name'
-                value={formValues.name}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-            <p className='contact__error'>{formErrors.name}</p>
-            <div className='contact__field'>
-              <label>Mail</label>
-              <input
-                type='text' 
-                name='mailAddress' 
-                value={formValues.mailAddress}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-            <p className='contact__error'>{formErrors.mailAddress}</p>
-          </div>
-          <div className='contact__right'>
-            <div className='contact__field'>
-              <label>Message</label>
-              <input 
-                type='text' 
-                name='message'
-                value={formValues.message}
-                onChange={(e) => handleChange(e)}
-              />
-            </div>
-            <p className='contact__error'>{formErrors.message}</p>
-          </div>
+      <div className='line'></div>
+      <div className='inner'>
+        <div className='contact__text'>
+          <h2>Contact Form</h2>
         </div>
-        <div className='contact__send'>
-          <button>send</button>
-          {Object.keys(formErrors).length > 0 && isSubmit && (
-            <div className='content__messageOk'>送信完了しました。</div>
-          )}
-        </div>
-      </form>
+        <form className='contact__form' onSubmit={sendMail}>
+          <div className='contact__wrap'>
+            <div className='contact__left'>
+              <div className='contact__field'>
+                <label>Name</label>
+                <input
+                  type='text' 
+                  name='name'
+                  value={formValues.name}
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <p className='contact__error'>{formErrors.name}</p>
+              <div className='contact__field'>
+                <label>Mail</label>
+                <input
+                  type='text' 
+                  name='mailAddress' 
+                  value={formValues.mailAddress}
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <p className='contact__error'>{formErrors.mailAddress}</p>
+            </div>
+            <div className='contact__right'>
+              <div className='contact__field'>
+                <label>Message</label>
+                <input 
+                  type='text' 
+                  name='message'
+                  value={formValues.message}
+                  onChange={(e) => handleChange(e)}
+                />
+              </div>
+              <p className='contact__error'>{formErrors.message}</p>
+            </div>
+          </div>
+          <div className='contact__send'>
+            <button>send</button>
+            {Object.keys(formErrors).length > 0 && isSubmit && (
+              <div className='content__messageOk'>送信完了しました。</div>
+            )}
+          </div>
+        </form>
+      </div>
     </section>
   )
 };

@@ -3,6 +3,7 @@
   font-size: 18px;
   width: 100%;
   background: rgb(240, 252, 255);
+  transition: all 5s ease-out;
 }
 
 header {
@@ -19,8 +20,6 @@ header {
   font-weight: bold;
 }
 
-
-
 nav ul li {
   list-style: none;
   display: inline-block;
@@ -32,6 +31,11 @@ nav ul li a {
   text-decoration: none;
   transition: all 0.2s;
   color: rgb(70, 70, 70);
+}
+
+nav ul li:nth-child(5) {
+  border-left: 1px solid rgb(70, 70, 70);
+  padding-left: 30px;
 }
 
 nav ul li a:hover {
@@ -48,7 +52,6 @@ nav ul li a:hover {
   height: 100vh;
   background-size: cover;
   background-position: center;
-  transition: all 5s ease-out;
 }
 
 .firstView__text {
@@ -118,18 +121,18 @@ nav ul li a:hover {
 }
 
 .contact {
-  max-width: 980px;
-  height: 100vh;
-  padding-top: 100px;
-  margin: 0 auto; 
+  padding-top: 200px;
+  height: 100vh; 
 }
 
-.contact h1 {
-  text-align: center;
+.contact__text {
+  position: absolute;
+  top: -240px;
   font-size: 50px;
   color: rgb(191, 191, 191);
   letter-spacing: 5px;
 }
+
 
 .contact__wrap {
   display: flex;
@@ -178,6 +181,10 @@ nav ul li a:hover {
   border: 1px solid rgb(228, 228, 228);
   box-shadow: 9px 11px 42px -2px #b2d1e1;
   border-radius: 7px;
+}
+
+.contact__send button:hover {
+  transform: scale(1.2);
 }
 
 .contact__error {

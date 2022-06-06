@@ -92,12 +92,12 @@ nav ul li a:hover {
 
 .about__content {
   position: relative;
-  padding: 100px 0 100px;
+  padding: 100px 50px;
 }
 
 .about__detail {
   border-left: 1px solid rgb(3, 3, 3);
-  padding-left: 100px
+  padding-left: 50px
 }
 
 .about__detail h3 {
@@ -111,7 +111,7 @@ nav ul li a:hover {
 
 .about__detail p:not(:first-child) {
   border-bottom: 1px solid rgb(3, 3, 3);
-  padding: 50px;
+  padding: 50px 0;
 }
 
 .contact {
@@ -276,7 +276,20 @@ nav ul li a:hover {
   .is-active {
     transform: translateX(0%) !important;
   }
-  
+
+  .about__title {
+    top: -75px;
+    font-size: 30px;
+  }
+
+  .about__detail h3 {
+    font-size: 2vh;
+  }
+
+  .about__detail p {
+    font-size: 1vh;
+  }
+
 }
 
   

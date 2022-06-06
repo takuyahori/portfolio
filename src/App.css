@@ -128,10 +128,7 @@ nav ul li a:hover {
 
 
 .contact__wrap {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-top: 100px;
+  margin-top: 50px;
 }
 
 .contact__field {
@@ -154,17 +151,13 @@ nav ul li a:hover {
   border-radius: 10px;
 }
 
-.contact__right {
-  margin-left: 50px;
-}
-
 .contact__right input {
   height: 150px;
 }
 
 .contact__send {
   text-align: center;
-  margin-top: 50px;
+  margin-top: 20px;
 }
 
 .contact__send button {
@@ -206,7 +199,7 @@ nav ul li a:hover {
 }
 
 .product__wrap {
-  margin-top: 80px;
+  margin: 80px;
 }
 
 .product__list li {
@@ -286,6 +279,15 @@ nav ul li a:hover {
     font-size: 1vh;
   }
 
+  .contact__form {
+    text-align: center;
+  }
+
+  .contact__text {
+    top: -105px;
+    font-size: 20px;
+  }
+
   .product__title {
     top: -105px;
     font-size: 20px;
@@ -319,6 +321,17 @@ nav ul li a:hover {
 
   .line {
     height: 180px;
+  }
+
+  .contact__wrap {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+  }
+
+  .contact__right {
+    margin-left: 50px;
   }
 
   .product__list {

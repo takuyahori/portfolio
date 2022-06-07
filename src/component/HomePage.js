@@ -3,7 +3,6 @@ import { animated, useTrail } from 'react-spring';
 import firstViewImg from "../images/23842768_s.jpg";
 
 const title = ["T", "a", "k", "u", "y", "a", " ", "H", "o", "r", "i", "'", "s", " ", "P", "o", "r", "t", "f", "o", "r", "i", "o"];
-const desc = ["W", "e", "b", " ", "E", "n", "g", "i", "n", "i", "i", "e", "r"];
 const config = { mass: 5, tension: 800, friction: 200 };
 
 const HomePage = () => {

@@ -5,11 +5,25 @@ import AboutPage from './component/AboutPage';
 import ProductPage from './component/ProductPage';
 import ContactPage from './component/ContactPage';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import { useEffect, useState } from 'react';
+import { useSpring, animated } from 'react-spring';
 
 function App() {
+
+  const [ toggle, setToggle ] = useState(false);
+  const styles = useSpring({ opacity: toggle ? 1 : 0 });
+
+  const handleToggle = () => {
+    setToggle(!toggle)
+  }
+
+  useEffect(() => {
+    handleToggle()
+  }, []);
+
   return (
     <Router> 
-      <div className="App">
+      <animated.div className="App" style={styles}>
         <Header />
         <main className='main'>
           <Routes>
@@ -19,7 +33,7 @@ function App() {
             <Route path="/contact" element={<ContactPage />} />
           </Routes>
         </main>
-      </div>
+      </animated.div>
     </Router>
   );
 }

@@ -12,7 +12,12 @@ const Aboutpage = () => {
           <div className='about__detail'>
             <h3>Introduction</h3>
             <p>
-              1993年生まれ東京都在住。現在はKYOKYU株式会社にてフロントエンドエンジニアとし活動。
+              1993年生まれ東京都在住。駒澤大学を卒業後、専門商社にて営業を経験し、Web広告代理店へ転職。
+              その後パーソナルトレーとして転職し独立。トレーナーというオフラインの仕事をしていく中でコロナ
+              ウイルスが蔓延。オンラインで何かスキルをつけたいと思いTECH CAMPへ入校。スクールではバックエンドを
+              勉強していたが、目に見える部分を実装できるフロントエンドにはまり、現在はKYOKYU株式会社にて
+              フロントエンドエンジニアとし活動。
+
             </p>
           </div>
           <div className='about__detail'>
@@ -34,7 +39,7 @@ const Aboutpage = () => {
               　　　　　　　　HTML　/　CSS　/　Javascript<br/>
               <br/>
               　　　　　　　　ー　Webアプリケーションフレームワーク<br/>
-              　　　　　　　　Ruby on Rails　/　React（学習中）　/　jQuery<br/>
+              　　　　　　　　Ruby on Rails　/　React.js（学習中）　/　jQuery<br/>
               <br/>
               　　　　　　　　ー　コミュニケーション<br/>
               　　　　　　　　slack　/　Backlog　/　Github<br/>

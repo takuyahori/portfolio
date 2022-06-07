@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import firstViewImg from "../images/23842768_s.jpg";
 
 
 const HomePage = () => {
+  const [ active, setActive ] = useState(false);
+
+  const classToggle = () => {
+    setActive(!active)
+  };
 
   return (
-    <div className='firstView'>
+    <div className='firstView' onUnload={classToggle}>
         <div className='firstView__img' style={{
             backgroundImage: `url(${firstViewImg})`}}>
             <h1 className='firstView__text'>

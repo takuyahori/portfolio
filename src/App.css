@@ -47,7 +47,9 @@ nav ul li a:hover {
   height: 100vh;
   background-size: cover;
   background-position: center;
+  overflow: hidden;
 }
+
 
 .firstView__text {
   display: block;
@@ -220,6 +222,7 @@ nav ul li a:hover {
     background-color: rgb(255, 255, 255);
     flex-direction: column;
     text-align: center;
+    overflow: hidden;
     transform: translateX(100%);
     transition: all 0.5s ease-in-out;
   }

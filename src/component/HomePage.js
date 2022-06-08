@@ -21,13 +21,12 @@ const HomePage = () => {
             <h1 className='firstView__text'>
               {trail.map(({ ...rest }, index) => (
                 <animated.span
-                  key={title[index]}
+                  key={index}
                   className="firstView__title"
                   style={{
                     ...rest
                   }}
-                >
-                  <animated.span>{title[index]}</animated.span>
+                >{title[index]}
                 </animated.span>
               ))}
             </h1>

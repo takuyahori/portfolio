@@ -25,8 +25,7 @@ const Aboutpage = () => {
               style={{
                 ...rest
               }}
-            >
-              <animated.span>{title[index]}</animated.span>
+            >{title[index]}
             </animated.span>
           ))}
         </h2>

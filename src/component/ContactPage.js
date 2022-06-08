@@ -5,7 +5,9 @@ import { useTrail, animated } from 'react-spring';
 const title = ["C", "o", "n", "t", "a", "c", "t", " ", "F", "o", "r", "m"];
 const config = { mass: 5, tension: 800, friction: 200 };
 
-const ContactPage = () => {
+
+
+export const ContactPage = () => {
 
   /* input要素内に文字を入力したときの各属性値の空の変数 */
   const initialValues = { name: "", mailAddress: "", message: "" };
@@ -46,24 +48,6 @@ const ContactPage = () => {
     };
   };
 
-  /* 各項目バリデーションチェック関数 */
-  const validate = (values) => {
-    const errors = {};
-    const regex = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
-    if(!values.name) {
-      errors.name = "名前を入力してください。";
-    }
-    if(!values.mailAddress) {
-      errors.mailAddress = "メールアドレスを入力してください。";
-    } else if(!regex.test(values.mailAddress)) {
-      errors.mailAddress = "正しいメールアドレスを入力してください。"
-    }
-    if(!values.message) {
-      errors.message = "メッセージを入力してください。";
-    }
-    return errors;
-  };
-
   const [ toggle, setToggle ] = useState(true);
   const trail = useTrail(title.length, {
     config,
@@ -78,12 +62,11 @@ const ContactPage = () => {
         <h2 className='contact__text'>
           {trail.map(({ ...rest }, index) => (
             <animated.span
-              key={title[index]}
+              key={index}
               style={{
                 ...rest
               }}
-            >
-              <animated.span>{title[index]}</animated.span>
+            >{title[index]}
             </animated.span>
           ))}
         </h2>
@@ -95,6 +78,7 @@ const ContactPage = () => {
                 <input
                   type='text' 
                   name='name'
+                  placeholder='name'
                   value={formValues.name}
                   onChange={(e) => handleChange(e)}
                 />
@@ -105,6 +89,7 @@ const ContactPage = () => {
                 <input
                   type='text' 
                   name='mailAddress' 
+                  placeholder='mail'
                   value={formValues.mailAddress}
                   onChange={(e) => handleChange(e)}
                 />
@@ -117,6 +102,7 @@ const ContactPage = () => {
                 <input 
                   type='text' 
                   name='message'
+                  placeholder='message'
                   value={formValues.message}
                   onChange={(e) => handleChange(e)}
                 />
@@ -125,7 +111,7 @@ const ContactPage = () => {
             </div>
           </div>
           <div className='contact__send'>
-            <button>send</button>
+            <button data-testId="submit" type='submit'>send</button>
             {Object.keys(formErrors).length > 0 && isSubmit && (
               <div className='content__messageOk'>送信完了しました。</div>
             )}
@@ -134,6 +120,24 @@ const ContactPage = () => {
       </div>
     </section>
   )
+};
+
+/* 各項目バリデーションチェック関数 */
+export const validate = (values) => {
+  const errors = {};
+  const regex = /^[A-Za-z0-9]{1}[A-Za-z0-9_.-]*@{1}[A-Za-z0-9_.-]+.[A-Za-z0-9]+$/;
+  if(!values.name) {
+    errors.name = "名前を入力してください。";
+  }
+  if(!values.mailAddress) {
+    errors.mailAddress = "メールアドレスを入力してください。";
+  } else if(!regex.test(values.mailAddress)) {
+    errors.mailAddress = "正しいメールアドレスを入力してください。"
+  }
+  if(!values.message) {
+    errors.message = "メッセージを入力してください。";
+  }
+  return errors;
 };
 
 export default ContactPage

@@ -1,5 +1,9 @@
 import React, { useState } from 'react'
 import { send } from 'emailjs-com';
+import { useTrail, animated } from 'react-spring';
+
+const title = ["C", "o", "n", "t", "a", "c", "t", " ", "F", "o", "r", "m"];
+const config = { mass: 5, tension: 800, friction: 200 };
 
 const ContactPage = () => {
 
@@ -60,13 +64,29 @@ const ContactPage = () => {
     return errors;
   };
 
+  const [ toggle, setToggle ] = useState(true);
+  const trail = useTrail(title.length, {
+    config,
+    opacity: toggle ? 1 : 0,
+    from: { opacity : 0 }
+  });
+
   return (
-    <section className="contact">
+    <section className="contact" onLoad={() => setToggle(toggle => !toggle)}>
       <div className='line'></div>
       <div className='inner'>
-        <div className='contact__text'>
-          <h2>Contact Form</h2>
-        </div>
+        <h2 className='contact__text'>
+          {trail.map(({ ...rest }, index) => (
+            <animated.span
+              key={title[index]}
+              style={{
+                ...rest
+              }}
+            >
+              <animated.span>{title[index]}</animated.span>
+            </animated.span>
+          ))}
+        </h2>
         <form className='contact__form' onSubmit={sendMail}>
           <div className='contact__wrap'>
             <div className='contact__left'>

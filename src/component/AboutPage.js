@@ -1,13 +1,35 @@
-import React from 'react'
+import React, { useState } from 'react'
+import { useTrail, animated } from 'react-spring';
+
+const title = ["P", "r", "o", "f", "i", "l", "e"];
+const config = { mass: 5, tension: 800, friction: 200 };
 
 const Aboutpage = () => {
+
+  const [ toggle, setToggle ] = useState(true);
+  const trail = useTrail(title.length, {
+    config,
+    opacity: toggle ? 1 : 0,
+    from: { opacity : 0 }
+  });
+
   return (
-    <section className="about">
+    <section className="about" onLoad={() => setToggle(toggle => !toggle)}>
       <div className='line'></div>
       <div className='inner'>
-        <div className='about__title'>
-          <h2>Profile</h2>
-        </div>
+        <h2 className='about__title'>
+          {trail.map(({ ...rest }, index) => (
+            <animated.span
+              key={title[index]}
+              className="firstView__title"
+              style={{
+                ...rest
+              }}
+            >
+              <animated.span>{title[index]}</animated.span>
+            </animated.span>
+          ))}
+        </h2>
         <div className='about__content'>
           <div className='about__detail'>
             <h3>Introduction</h3>

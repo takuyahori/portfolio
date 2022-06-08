@@ -15,7 +15,7 @@ const HomePage = () => {
   });
 
   return (
-    <div className='firstView' onLoad={() => setToggle(state => !state)}>
+    <div className='firstView' onLoad={() => setToggle(toggle => !toggle)}>
         <div className='firstView__img' style={{
             backgroundImage: `url(${firstViewImg})`}}>
             <h1 className='firstView__text'>

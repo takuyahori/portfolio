@@ -22,12 +22,11 @@ const ProductsPage = () => {
         <h2 className='product__title'>
           {trail.map(({ ...rest }, index) => (
             <animated.span
-              key={title[index]}
+              key={index}
               style={{
                 ...rest
               }}
-            >
-              <animated.span>{title[index]}</animated.span>
+            >{title[index]}
             </animated.span>
           ))}
         </h2>

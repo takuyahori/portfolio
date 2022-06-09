@@ -29,7 +29,7 @@ export const ContactPage = () => {
       ...values,
       [e.target.name]: e.target.value
     }));
-    console.log(formValues);
+    // console.log(formValues);
   };
 
   const handleSubmit = (e) => {
@@ -110,7 +110,7 @@ export const ContactPage = () => {
             </div>
           </div>
           <div className='contact__send'>
-            <button>send</button>
+            <button data-testid='submit' type='submit'>send</button>
             {status && renderAlert()}
           </div>
         </form>

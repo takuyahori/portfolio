@@ -159,16 +159,13 @@ nav ul li a:hover {
   transform: scale(1.2);
 }
 
-.contact__error {
-  color: red;
-  margin: 0;
+.contact__alert {
+  color: rgb(255, 174, 0);
+  background-color: #fff;
+  padding: 5px 0;
+  margin: 20px;
   align-self: flex-start;
-}
-
-.content__messageOk {
-  margin-top: 30px;
-  color: rgb(105, 104, 104);
-  font-size: 15px;
+  border-radius: 30px;
 }
 
 .product {
